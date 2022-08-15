@@ -27,7 +27,8 @@ class IsolationShape:
         
         Examples
         --------
-        >>> IsolationShape(1, 10, 0, 1)
+        >>> from openacquisition.isolation_windows.isolation_shape import IsolationShape
+        >>> shape = IsolationShape(1, 10, 0, 1)
         """
        
         self.a = a
@@ -51,6 +52,7 @@ class IsolationShape:
         
         Examples
         --------
+        >>> from openacquisition.isolation_windows.isolation_shape import IsolationShape
         >>> shape = IsolationShape(1, 10, 0, 1)
         >>> shape.get_isolation_efficiency(0.0)
         """
@@ -76,6 +78,7 @@ class IsolationShape:
         
         Examples
         --------
+        >>> from openacquisition.isolation_windows.isolation_shape import IsolationShape
         >>> shape = IsolationShape(1, 10, 1, 1)
         >>> shape.get_isolation_efficiency_unshifted(0.0)
         """
@@ -102,6 +105,7 @@ class IsolationShape:
         
         Examples
         --------
+        >>> from openacquisition.isolation_windows.isolation_shape import IsolationShape
         >>> shape = IsolationShape(1, 10, 0, 1)
         >>> shape.get_offset_range()
         >>> shape.get_offset_range(0.01)
@@ -125,6 +129,7 @@ class IsolationShape:
         
         Examples
         --------
+        >>> from openacquisition.isolation_windows.isolation_shape import IsolationShape
         >>> shape = IsolationShape(1, 10, 0, 1)
         >>> shape.offset_range()
         """
