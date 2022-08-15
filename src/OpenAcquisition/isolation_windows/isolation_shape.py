@@ -24,6 +24,10 @@ class IsolationShape:
         Let :math:`y = \frac{d}{1+\frac{\left|x-c\right|}{a}^{2b}}`
         where :math:`y` represents the isolation efficiency
         and :math:`x` represents the offset from the center of the window.
+        
+        Examples
+        --------
+        >>> IsolationShape(1, 10, 0, 1)
         """
        
         self.a = a
@@ -44,6 +48,11 @@ class IsolationShape:
         -------
         float
             isolation efficiency
+        
+        Examples
+        --------
+        >>> shape = IsolationShape(1, 10, 0, 1)
+        >>> shape.get_isolation_efficiency(0.0)
         """
         
         return self.d / (1 + math.pow(abs((offset - self.c) / self.a), self.b2))
@@ -64,6 +73,11 @@ class IsolationShape:
         Notes
         -----
         This ignores the c parameter of the generalized bell-shaped function.
+        
+        Examples
+        --------
+        >>> shape = IsolationShape(1, 10, 1, 1)
+        >>> shape.get_isolation_efficiency_unshifted(0.0)
         """
         return self.d / (1 + math.pow(abs((offset) / self.a), self.b2))
     
@@ -85,6 +99,13 @@ class IsolationShape:
         -----
         Since the generalized bell-shaped function is convex and symmetric, the range from the negative and postive
         values will contain all offsets with efficiency >= efficiency_threshold.
+        
+        Examples
+        --------
+        >>> shape = IsolationShape(1, 10, 0, 1)
+        >>> shape.get_offset_range()
+        >>> shape.get_offset_range(0.01)
+        >>> shape.get_offset_range(0.001)
         """
         return self.a * math.pow((self.d / efficiency_threshold - 1), 1 / self.b2)
     
@@ -101,6 +122,11 @@ class IsolationShape:
         Notes
         -----
         Lazy evaluation. Will only be computed at first request and then the result will be cached 
+        
+        Examples
+        --------
+        >>> shape = IsolationShape(1, 10, 0, 1)
+        >>> shape.offset_range()
         """
         return self.get_offset_range()
     
