@@ -2,9 +2,7 @@ import math
 from lazy import lazy
 
 class IsolationShape:
-    
-    def __init__(self, a, b, c, d):
-        """Isolation efficiency model constructor
+    """Isolation efficiency model constructor
         
         Generalized bell-shaped function representing the isolation efficiency shape of a quadrupole or linear ion trap.
 
@@ -21,8 +19,7 @@ class IsolationShape:
             
         Notes
         -----
-        Let :math:`y = \frac{d}{1+\frac{\left|x-c\right|}{a}^{2b}}`
-        where :math:`y` represents the isolation efficiency
+        Let :math:`y = \\frac{d}{1+\\left|\\frac{x-c}{a}\\right|^{2b}}`, where :math:`y` represents the isolation efficiency,
         and :math:`x` represents the offset from the center of the window.
         
         Examples
@@ -30,7 +27,10 @@ class IsolationShape:
         >>> from openacquisition.isolation_windows.isolation_shape import IsolationShape
         >>> shape = IsolationShape(1, 10, 0, 1)
         """
-       
+    
+    
+    
+    def __init__(self, a, b, c, d):
         self.a = a
         self.b = b
         self.b2 = 2*b
@@ -125,7 +125,7 @@ class IsolationShape:
             
         Notes
         -----
-        Lazy evaluation. Will only be computed at first request and then the result will be cached 
+        Lazy evaluation. Will only be computed at first request and then the result will be cached.
         
         Examples
         --------
