@@ -9,8 +9,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 pyopenms = "^2.7.0"
+lazy = "^1.4"
 
 [tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
 branch = "main"                             # branch to make releases of

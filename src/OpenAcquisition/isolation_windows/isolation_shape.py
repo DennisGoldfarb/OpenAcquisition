@@ -1,4 +1,5 @@
 import math
+from lazy import lazy
 
 class IsolationShape:
     
@@ -16,7 +17,6 @@ class IsolationShape:
         self.b2 = 2*b
         self.c = c
         self.d = d
-        self.offset_range = self.get_offset_range()
     
     def get_isolation_efficiency(self, offset):
         """Computes the isolation efficiency at a given offset from the center of the isolation window.
@@ -41,6 +41,7 @@ class IsolationShape:
         """
         return self.d / (1 + math.pow(abs((offset) / self.a), self.b2))
     
+   
     def get_offset_range(self, efficiency_threshold = 0.01):
         """Returns the positive unshifted offset (ignores the c parameter) with the given isolation efficiency threshold.
         Since the generalized bell-shaped function is convex and symmetric, the range from the negative and postive
@@ -53,3 +54,16 @@ class IsolationShape:
             float: positive unshifted offset with the given isolation efficiency
         """
         return self.a * math.pow((self.d / efficiency_threshold - 1), 1 / self.b2)
+    
+    @lazy
+    def offset_range(self):
+        """Returns the positive unshifted offset (ignores the c parameter) with 0.01 isolation efficiency threshold.
+        Since the generalized bell-shaped function is convex and symmetric, the range from the negative and postive
+        values will contain all offsets with efficiency >= efficiency_threshold.
+
+        Returns:
+            float: positive unshifted offset with the given isolation efficiency
+        """
+        return self.get_offset_range()
+    
+
