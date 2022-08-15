@@ -20,6 +20,10 @@ def test_get_isolation_efficiency():
     assert shape.get_isolation_efficiency(1) == pytest.approx(1.0)
     assert shape.get_isolation_efficiency(2) == pytest.approx(0.5)
     
+    shape = IsolationShape(1,10,-1,1)
+    assert shape.get_isolation_efficiency(1) == pytest.approx(9.536734e-7)
+    assert shape.get_isolation_efficiency(2) == pytest.approx(2.867972e-10)
+    
     shape = IsolationShape(1,10,0,0.5)
     assert shape.get_isolation_efficiency(1) == pytest.approx(0.25)
 
