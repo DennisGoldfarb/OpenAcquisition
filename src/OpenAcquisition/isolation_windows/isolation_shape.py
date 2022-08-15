@@ -28,9 +28,9 @@ class IsolationShape:
         >>> shape = IsolationShape(1, 10, 0, 1)
         """
     
-    
-    
     def __init__(self, a, b, c, d):
+        """Constructor
+        """
         self.a = a
         self.b = b
         self.b2 = 2*b
