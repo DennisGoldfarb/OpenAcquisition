@@ -20,6 +20,7 @@ matplotlib = "^3.5.3"
 myst-nb = {version = "^0.16.0", python = "^3.9"}
 sphinx-autoapi = "^1.9.0"
 sphinx-rtd-theme = "^1.0.0"
+python-semantic-release = "^7.31.2"
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
 branch = "main"                             # branch to make releases of
@@ -34,3 +35,6 @@ patch_without_tag = true                    # patch release by default
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version"
