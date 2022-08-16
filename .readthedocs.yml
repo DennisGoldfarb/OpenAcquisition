@@ -1,23 +1,4 @@
 # Required
-#version: 2
-
-# Image to use
-#build:
-#  image: testing
-
-# Build documentation in the docs/ directory with Sphinx
-#sphinx:
-#   configuration: docs/conf.py
-
-# Configuration
-#python:
-#  version: 3.9
-#  install:
-#    - requirements: docs/requirements.txt
-#    - method: pip
-#      path: .
-
-# Required
 version: 2
 
 # Set the version of Python and other tools you might need
