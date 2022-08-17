@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v0.0.5 (2022-08-17)
+
+
 ## v0.0.4 (2022-08-17)
 ### Documentation
 * Code coverage badge ([`b92ea6e`](https://github.com/DennisGoldfarb/OpenAcquisition/commit/b92ea6e5225aca68712d25a36db12485e6a4e965))
