@@ -134,4 +134,6 @@ class IsolationShape:
         >>> shape.offset_range()
         """
         return self.get_offset_range()
-    
+
+
+
