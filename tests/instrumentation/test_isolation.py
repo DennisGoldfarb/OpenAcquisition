@@ -1,5 +1,5 @@
 import pytest
-from openacquisition.isolation_windows.isolation_shape import IsolationShape
+from openacquisition.instrumentation.isolation import IsolationShape
 
 def test_init():
     shape = IsolationShape(1,10,0,1)
