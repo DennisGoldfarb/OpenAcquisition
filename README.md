@@ -1,6 +1,6 @@
 # OpenAcquisition
 [![License: MIT](https://img.shields.io/github/license/DennisGoldfarb/OpenAcquisition)](https://opensource.org/licenses/MIT)
-[![Documentation](https://readthedocs.org/projects/pip/badge/?style=flat)](https://openacquisition.readthedocs.io/en/main/)
+[![Documentation](https://readthedocs.org/projects/openacquisition/badge/?style=flat)](https://openacquisition.readthedocs.io/en/main/)
 ![Build](https://github.com/DennisGoldfarb/OpenAcquisition/actions/workflows/ci-cd.yml/badge.svg)
 [![Version](https://img.shields.io/pypi/v/openacquisition)](https://pypi.org/project/openacquisition/)
 
