@@ -1,4 +1,5 @@
 # openacquisition
+https://github.com/DennisGoldfarb/OpenAcquisition/actions/workflows/ci-cd/badge.svg
 
 Python library to create data acquisition algorithms for mass spectrometers
 
