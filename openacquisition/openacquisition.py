@@ -7,22 +7,22 @@ from abc import ABC, abstractmethod
 class APIConverter(ABC):
     
     @abstractmethod
-    def connect_to_instrument(parameters):
+    def connect_to_instrument(self, parameters):
         pass
 
     @abstractmethod
-    def disconnect_from_instrument(parameters):
+    def disconnect_from_instrument(self, parameters):
         pass
 
     @abstractmethod
-    def get_instrument_status(parameters):
+    def get_instrument_status(self, parameters):
         pass
 
     @abstractmethod
-    def submit_scan_request(parameters):
+    def submit_scan_request(self, parameters):
         pass
     
-    def on_scan_arrived(scan):
+    def on_scan_arrived(self, scan):
         pass
     
 
