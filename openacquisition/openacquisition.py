@@ -1,29 +1,45 @@
+from yapsy.IPlugin import IPlugin
 from abc import ABC, abstractmethod
+from typing import Optional, List
+from logging import Logger
 
 
+class APIConverterPlugin(IPlugin):
+    @abstractmethod
+    def connectToInstrument(self, parameters):
+        pass
 
+    @abstractmethod
+    def disconnectFromInstrument(self, parameters):
+        pass
 
+    @abstractmethod
+    def getInstrumentStatus(self, parameters):
+        pass
 
-class APIConverter(ABC):
+    @abstractmethod
+    def submitScanRequest(self, parameters):
+        pass
     
     @abstractmethod
-    def connect_to_instrument(self, parameters):
+    def onScanArrived(self, scan):
         pass
-
-    @abstractmethod
-    def disconnect_from_instrument(self, parameters):
-        pass
-
-    @abstractmethod
-    def get_instrument_status(self, parameters):
-        pass
-
-    @abstractmethod
-    def submit_scan_request(self, parameters):
-        pass
+  
     
-    def on_scan_arrived(self, scan):
+class AcquisitionMethodPlugin(IPlugin):
+    @abstractmethod
+    def processScan(self, scan):
         pass
+
+    @abstractmethod
+    def onComplete(self):
+        pass
+
+    @abstractmethod
+    def onScanRequested(self):
+        pass
+
+
     
 
 
