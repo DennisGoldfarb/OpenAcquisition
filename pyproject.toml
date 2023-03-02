@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "openacquisition"
-version = "0.0.6"
+version = "0.0.7"
 description = "A package for creating data acquisition methods for mass spectrometers"
 authors = ["Dennis Goldfarb"]
 license = "None"
