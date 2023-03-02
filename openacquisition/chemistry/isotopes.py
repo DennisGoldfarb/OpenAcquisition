@@ -1,9 +1,12 @@
+import logging
 import xml.sax
 import pkg_resources
 import pyopenms as po
 import base64
 import struct
 from openacquisition.mathematics.splines import CubicSpline
+
+logger = logging.getLogger(__name__)
 
 def estimateFromPeptideWeight(mono_mass, max_isotope): 
     # Fast approximation using spline models

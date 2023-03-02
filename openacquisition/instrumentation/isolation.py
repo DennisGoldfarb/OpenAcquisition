@@ -1,5 +1,8 @@
 import math
 from lazy import lazy
+from logging
+
+logger = logging.getLogger(__name__)
 
 class IsolationShape:
     """Isolation efficiency model constructor

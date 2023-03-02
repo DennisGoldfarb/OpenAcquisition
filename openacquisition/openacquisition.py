@@ -1,8 +1,9 @@
+import logging
 from yapsy.IPlugin import IPlugin
 from abc import ABC, abstractmethod
 from typing import Optional, List
-from logging import Logger
 
+logger = logging.getLogger(__name__)
 
 class APIConverterPlugin(IPlugin):
     @abstractmethod

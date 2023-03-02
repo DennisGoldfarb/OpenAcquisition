@@ -1,4 +1,8 @@
+import logging
 from bisect import bisect_right
+
+
+logger = logging.getLogger(__name__)
 
 class CubicSpline:
     def __init__(self, a, b, c, d, knots):     
